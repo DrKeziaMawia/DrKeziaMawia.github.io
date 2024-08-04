@@ -6,33 +6,33 @@
     <title>Dr. Kezia's Personal Website</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
-        body {
+            body {
             font-family: 'Arial', sans-serif;
             line-height: 1.6;
             margin: 0;
             padding: 0;
-            background: linear-gradient(to right, #ffeef8, #f8c2d5); /* Gradient background */
+            background: linear-gradient(to right, #ffeef8, #f8c2d5);
             color: #333;
         }
 
         header {
-            background: #ff9dc3; /* Soft pink background */
+            background: #ff9dc3;
             color: #fff;
             padding: 2em 0;
             text-align: center;
-            border-bottom: 5px solid #ff7f9c; /* Accent color */
+            border-bottom: 5px solid #ff7f9c;
         }
 
         nav {
-            text-align: center; /* Center the content of the nav */
+            text-align: center;
         }
 
         nav ul {
             list-style: none;
             padding: 0;
             margin: 0;
-            background: #ff7f9c; /* Medium pink background */
-            display: inline-block; /* Make ul fit content */
+            background: #ff7f9c;
+            display: inline-block;
         }
 
         nav ul li {
@@ -50,7 +50,7 @@
         }
 
         nav ul li a:hover {
-            background: #ff5f6d; /* Darker pink on hover */
+            background: #ff5f6d;
         }
 
         main {
@@ -63,7 +63,7 @@
             margin: 0 auto;
             background: #fff;
             border-radius: 15px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Soft shadow */
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
             overflow: hidden;
             padding: 20px;
             text-align: center;
@@ -73,14 +73,14 @@
             width: 150px;
             height: 150px;
             border-radius: 50%;
-            border: 5px solid #ff7f9c; /* Accent color border */
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Soft shadow */
+            border: 5px solid #ff7f9c;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
         }
 
         .profile-card h2 {
             margin: 10px 0 5px;
             font-size: 1.8em;
-            color: #ff7f9c; /* Accent color */
+            color: #ff7f9c;
         }
 
         .profile-card p {
@@ -91,18 +91,20 @@
 
         .profile-card .social-links {
             margin: 15px 0;
+            display: flex;
+            justify-content: center;
+            gap: 10px; /* Adjust gap as needed */
         }
 
         .profile-card .social-links a {
-            font-size: 24px;
-            margin: 0 10px;
-            color: #ff7f9c; /* Light pink color for icons */
+            font-size: 20px; /* Reduced font size */
+            color: #ff7f9c;
             text-decoration: none;
             transition: color 0.3s ease;
         }
 
         .profile-card .social-links a:hover {
-            color: #f76c8b; /* Darker pink on hover */
+            color: #f76c8b;
         }
 
         section {
@@ -112,29 +114,29 @@
             position: relative;
             padding: 2em;
             border-radius: 15px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Soft shadow */
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
         }
 
         .interest {
-            background: #fce4e9; /* Very light pink background */
+            background: #fce4e9;
             padding: 1.5em;
             border-radius: 15px;
-            margin: 15px auto; /* Margin adjusted to prevent overlap */
+            margin: 15px auto;
             display: inline-block;
-            width: calc(50% - 30px); /* Adjust width for responsiveness */
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Soft shadow */
+            width: calc(50% - 30px);
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
             transition: transform 0.3s ease, box-shadow 0.3s ease;
-            text-align: center; /* Center text and icons */
+            text-align: center;
         }
 
         .interest:hover {
             transform: scale(1.02);
-            box-shadow: 0 6px 12px rgba(0,0,0,0.2); /* Shadow on hover */
+            box-shadow: 0 6px 12px rgba(0,0,0,0.2);
         }
 
         .interest i {
-            font-size: 50px; /* Larger icon size */
-            color: #ff7f9c; /* Light pink color for icons */
+            font-size: 50px;
+            color: #ff7f9c;
             display: block;
             margin-bottom: 10px;
         }
@@ -150,11 +152,11 @@
         }
 
         footer {
-            background: #ff9dc3; /* Soft pink background */
+            background: #ff9dc3;
             color: #fff;
             padding: 1em 0;
             text-align: center;
-            border-top: 5px solid #ff7f9c; /* Accent color */
+            border-top: 5px solid #ff7f9c;
         }
 
         footer a {
@@ -181,13 +183,15 @@
             }
 
             .interest {
-                width: calc(100% - 30px); /* Full width on small screens */
+                width: calc(100% - 30px);
             }
 
             .interest i {
                 font-size: 30px;
             }
         }
+
+
     </style>
 </head>
 <body>
