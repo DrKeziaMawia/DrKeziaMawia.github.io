@@ -13,37 +13,35 @@
             padding: 0;
             background: linear-gradient(to right, #ffeef8, #f8c2d5); /* Gradient background */
             color: #333;
-            overflow-x: hidden; /* Prevent horizontal scroll */
         }
 
         header {
             background: #ff9dc3; /* Soft pink background */
             color: #fff;
-            padding: 2em 1em;
+            padding: 2em 0;
             text-align: center;
             border-bottom: 5px solid #ff7f9c; /* Accent color */
         }
 
         nav {
-            background: #ff7f9c; /* Medium pink background */
-            overflow: hidden; /* Ensure navigation doesn't overflow */
+            text-align: center; /* Center the content of the nav */
         }
 
         nav ul {
             list-style: none;
             padding: 0;
             margin: 0;
-            display: flex;
-            justify-content: center;
-            flex-wrap: nowrap; /* Prevent wrapping */
+            background: #ff7f9c; /* Medium pink background */
+            display: inline-block; /* Make ul fit content */
         }
 
         nav ul li {
+            display: inline;
             margin: 0;
         }
 
         nav ul li a {
-            display: block;
+            display: inline-block;
             padding: 15px 20px;
             text-decoration: none;
             color: #fff;
@@ -58,26 +56,75 @@
         main {
             padding: 2em 1em;
             text-align: center;
-            max-width: 100%; /* Ensure it spans the full width */
-            margin: 0 auto; /* Center main content horizontally */
+        }
+
+        .profile-card {
+            max-width: 350px;
+            margin: 0 auto;
+            background: #fff;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Soft shadow */
+            overflow: hidden;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .profile-card img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 5px solid #ff7f9c; /* Accent color border */
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Soft shadow */
+        }
+
+        .profile-card h2 {
+            margin: 10px 0 5px;
+            font-size: 1.8em;
+            color: #ff7f9c; /* Accent color */
+        }
+
+        .profile-card p {
+            margin: 0;
+            font-size: 1.1em;
+            color: #666;
+        }
+
+        .profile-card .social-links {
+            margin: 15px 0;
+        }
+
+        .profile-card .social-links a {
+            font-size: 24px;
+            margin: 0 10px;
+            color: #ff7f9c; /* Light pink color for icons */
+            text-decoration: none;
+            transition: color 0.3s ease;
+        }
+
+        .profile-card .social-links a:hover {
+            color: #f76c8b; /* Darker pink on hover */
         }
 
         section {
             margin: 30px auto;
-            max-width: 1000px; /* Max width to center content */
-            padding: 0 1em; /* Add padding to avoid content touching the edges */
+            max-width: 800px;
+            text-align: center;
+            position: relative;
+            padding: 2em;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Soft shadow */
         }
 
         .interest {
             background: #fce4e9; /* Very light pink background */
             padding: 1.5em;
             border-radius: 15px;
-            margin-bottom: 20px;
+            margin: 15px auto; /* Margin adjusted to prevent overlap */
+            display: inline-block;
+            width: calc(50% - 30px); /* Adjust width for responsiveness */
             box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Soft shadow */
             transition: transform 0.3s ease, box-shadow 0.3s ease;
-            display: block; /* Ensure each card takes full width */
-            width: 100%; /* Ensure it spans the full width */
-            box-sizing: border-box; /* Include padding in width calculation */
+            text-align: center; /* Center text and icons */
         }
 
         .interest:hover {
@@ -86,10 +133,20 @@
         }
 
         .interest i {
-            font-size: 30px; /* Smaller icon size */
+            font-size: 50px; /* Larger icon size */
             color: #ff7f9c; /* Light pink color for icons */
             display: block;
             margin-bottom: 10px;
+        }
+
+        .interest h3 {
+            font-size: 1.4em;
+            margin: 10px 0;
+        }
+
+        .interest p {
+            font-size: 1em;
+            margin: 0;
         }
 
         footer {
@@ -109,49 +166,22 @@
             text-decoration: underline;
         }
 
-        .profile-pic {
-            max-width: 150px;
-            border-radius: 50%;
-            margin: 20px auto;
-            border: 5px solid #ff7f9c; /* Accent color border */
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Soft shadow */
-            display: block;
-        }
-
-        .social-links {
-            text-align: center;
-            margin: 20px 0;
-        }
-
-        .social-icon {
-            font-size: 24px; /* Reduced icon size */
-            margin: 0 8px; /* Adjusted spacing */
-            color: #ff7f9c; /* Light pink color for icons */
-            text-decoration: none;
-            transition: color 0.3s ease, transform 0.3s ease;
-        }
-
-        .social-icon:hover {
-            color: #f76c8b; /* Darker pink on hover */
-            transform: scale(1.1);
-        }
-
-        /* Media Query for Mobile Devices */
         @media (max-width: 768px) {
-            nav ul {
-                /* Keep the horizontal layout */
-                flex-direction: row; /* Horizontal layout */
-                align-items: center;
-                overflow-x: auto; /* Allow horizontal scroll if needed */
+            .profile-card img {
+                width: 120px;
+                height: 120px;
             }
 
-            nav ul li a {
-                padding: 10px;
-                font-size: 14px;
+            .profile-card h2 {
+                font-size: 1.5em;
             }
 
-            .profile-pic {
-                max-width: 120px;
+            .profile-card p {
+                font-size: 1em;
+            }
+
+            .interest {
+                width: calc(100% - 30px); /* Full width on small screens */
             }
 
             .interest i {
@@ -174,13 +204,25 @@
     <main>
         <section id="about">
             <h2>About Me</h2>
-            <img src="kezia.png" alt="Dr. Kezia's Picture" class="profile-pic">
-            <p>Hello! I'm Dr. Kezia, a medical doctor with a passion for dancing, fashion, mental wellness, and self-care. Welcome to my personal website where I share my journey and tips on living a balanced life.</p>
+            <div class="profile-card">
+                <img src="kezia.png" alt="Dr. Kezia's Picture">
+                <h2>Dr. Kezia Mawia</h2>
+                <p>Hello! I'm Dr. Kezia, a medical doctor with a passion for dancing, fashion, mental wellness, and self-care. Welcome to my personal website where I share my journey and tips on living a balanced life.</p>
+                <div class="social-links">
+                    <a href="https://www.linkedin.com/in/kezia-mawia-0463a5242?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" class="social-icon fab fa-linkedin"></a>
+                    <a href="https://www.instagram.com/kylerivan?igsh=dHR3cTAyZzh0bjI1" target="_blank" class="social-icon fab fa-instagram"></a>
+                    <a href="https://x.com/Nofear98749?t=9C3qfeHMzqoVe5l9pcINOA&s=09" target="_blank" class="social-icon fab fa-x"></a>
+                    <a href="https://youtube.com/@keziamawia6424?si=ynXCasvqnrv7b_Bv" target="_blank" class="social-icon fab fa-youtube"></a>
+                    <a href="https://www.tiktok.com/@kyler_zia?_t=8oaWTKsp8YX&_r=1" target="_blank" class="social-icon fab fa-tiktok"></a>
+                    <a href="mailto:keziamawia98@gmail.com" class="social-icon far fa-envelope"></a>
+                    <a href="tel:+254704892447" class="social-icon fas fa-phone"></a>
+                </div>
+            </div>
         </section>
         <section id="interests">
             <h2>My Interests</h2>
             <div class="interest">
-                <i class="fas fa-music"></i> <!-- Music icon to represent dancing -->
+                <i class="fas fa-music"></i> <!-- Icon for dancing replaced with music icon -->
                 <h3>Dancing</h3>
                 <p>Dancing is my way of expressing joy and staying fit. I love exploring different dance styles and attending dance classes.</p>
             </div>
@@ -200,21 +242,9 @@
                 <p>Self-care is my priority. I believe in taking time for myself to recharge and stay healthy both physically and mentally.</p>
             </div>
         </section>
-        <section id="contact">
-            <h2>Contact Me</h2>
-            <div class="social-links">
-                <a href="https://www.linkedin.com/in/kezia-mawia-0463a5242?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" class="social-icon fab fa-linkedin"></a>
-                <a href="https://www.instagram.com/kylerivan?igsh=dHR3cTAyZzh0bjI1" target="_blank" class="social-icon fab fa-instagram"></a>
-                <a href="https://x.com/Nofear98749?t=9C3qfeHMzqoVe5l9pcINOA&s=09" target="_blank" class="social-icon fab fa-x"></a>
-                <a href="https://youtube.com/@keziamawia6424?si=ynXCasvqnrv7b_Bv" target="_blank" class="social-icon fab fa-youtube"></a>
-                <a href="https://www.tiktok.com/@kyler_zia?_t=8oaWTKsp8YX&_r=1" target="_blank" class="social-icon fab fa-tiktok"></a>
-                <a href="mailto:keziamawia98@gmail.com" class="social-icon far fa-envelope"></a>
-                <a href="tel:+254704892447" class="social-icon fas fa-phone"></a>
-            </div>
-        </section>
     </main>
     <footer>
-        <p>&copy; 2024 Dr. Kezia's Personal Website</p>
+        <p>&copy; 2024 Dr. Kezia Mawia. All rights reserved. <a href="mailto:contact@drkezia.com">Contact Me</a></p>
     </footer>
 </body>
 </html>
