@@ -160,21 +160,32 @@ section {
 }
 
 footer {
-    background: #ff9dc3;
-    color: #fff;
-    padding: 1em 0;
-    text-align: center;
-    border-top: 5px solid #ff7f9c;
-}
+            background: #ff9dc3;
+            color: #fff;
+            padding: 1em 0;
+            text-align: center;
+            border-top: 5px solid #ff7f9c;
+            font-size: 1em; /* Adjust font size for better readability */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
 
-footer a {
-    color: #fff;
-    text-decoration: none;
-}
+        footer p {
+            margin: 0;
+            padding: 0.5em 0;
+        }
 
-footer a:hover {
-    text-decoration: underline;
-}
+        footer a {
+            color: #fff;
+            text-decoration: underline;
+            transition: color 0.3s ease;
+        }
+
+        footer a:hover {
+            color: #ffeef8; /* Change color on hover for better contrast */
+        }
 
 @media (max-width: 768px) {
     .profile-card img {
@@ -220,7 +231,8 @@ footer a:hover {
                 <img src="kezia.png" alt="Dr. Kezia's Picture">
                 <h2>Dr. Kezia Mawia</h2>
                 <p>Hello! I'm Dr. Kezia, a medical doctor with a passion for dancing, fashion, mental wellness, and self-care. Welcome to my personal space where I share my journey and tips on living a balanced life.</p>
-                <div class="social-links">
+                <div class="social-links"
+                id="contact">
                     <a href="https://www.linkedin.com/in/kezia-mawia-0463a5242?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" class="social-icon fab fa-linkedin"></a>
                     <a href="https://www.instagram.com/kylerivan?igsh=dHR3cTAyZzh0bjI1" target="_blank" class="social-icon fab fa-instagram"></a>
                     <a href="https://x.com/Nofear98749?t=9C3qfeHMzqoVe5l9pcINOA&s=09" target="_blank" class="social-icon fab fa-x"></a>
@@ -256,7 +268,8 @@ footer a:hover {
         </section>
     </main>
     <footer>
-        <p>&copy; 2024 Dr. Kezia Mawia. All rights reserved. <a href="mailto:contact@drkezia.com">Contact Me</a></p>
+        <p>&copy; 2024 Dr. Kezia Mawia. All rights reserved.</p>
+        <p><a href="mailto:contact@drkezia.com">Contact Me</a></p>
     </footer>
 </body>
 </html>
