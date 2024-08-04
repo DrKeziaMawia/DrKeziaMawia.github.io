@@ -6,7 +6,6 @@
     <title>Dr. Kezia's Personal Website</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <style>
-        /* General Styles */
         body {
             font-family: 'Arial', sans-serif;
             line-height: 1.6;
@@ -14,30 +13,34 @@
             padding: 0;
             background: linear-gradient(to right, #ffeef8, #f8c2d5); /* Gradient background */
             color: #333;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
         }
 
         header {
             background: #ff9dc3; /* Soft pink background */
             color: #fff;
-            padding: 2em 0;
+            padding: 2em 1em;
             text-align: center;
             border-bottom: 5px solid #ff7f9c; /* Accent color */
         }
 
         nav {
-            background: #ff7f9c; /* Medium pink background */
-            padding: 0.5em 0;
+            text-align: center; /* Center the content of the nav */
         }
 
         nav ul {
             list-style: none;
             padding: 0;
             margin: 0;
-            text-align: center;
+            background: #ff7f9c; /* Medium pink background */
+            display: inline-block; /* Make ul fit content */
         }
 
         nav ul li {
             display: inline;
+            margin: 0;
         }
 
         nav ul li a {
@@ -54,6 +57,7 @@
         }
 
         main {
+            flex: 1; /* Make main take up remaining space */
             padding: 2em 1em;
             text-align: center;
         }
@@ -62,15 +66,6 @@
             margin: 30px auto;
             max-width: 800px;
             text-align: center;
-        }
-
-        .profile-pic {
-            max-width: 200px;
-            border-radius: 50%;
-            margin: 20px auto;
-            border: 5px solid #ff7f9c; /* Accent color border */
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Soft shadow */
-            display: block;
         }
 
         .interest {
@@ -99,7 +94,7 @@
         footer {
             background: #ff9dc3; /* Soft pink background */
             color: #fff;
-            padding: 1em 0;
+            padding: 1em 1em;
             text-align: center;
             border-top: 5px solid #ff7f9c; /* Accent color */
         }
@@ -113,6 +108,15 @@
             text-decoration: underline;
         }
 
+        .profile-pic {
+            max-width: 200px;
+            border-radius: 50%;
+            margin: 20px auto;
+            border: 5px solid #ff7f9c; /* Accent color border */
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Soft shadow */
+            display: block;
+        }
+
         .social-links {
             text-align: center;
             margin: 20px 0;
@@ -123,37 +127,34 @@
             margin: 0 15px;
             color: #ff7f9c; /* Light pink color for icons */
             text-decoration: none;
-            transition: color 0.3s ease, transform 0.3s ease;
+            transition: color 0.3s ease;
         }
 
         .social-icon:hover {
             color: #f76c8b; /* Darker pink on hover */
+        }
+
+        .social-icon {
+            transition: transform 0.3s ease;
+        }
+
+        .social-icon:hover {
             transform: scale(1.1);
         }
 
-        /* Responsive Styles */
         @media (max-width: 768px) {
             nav ul {
-                text-align: center;
+                display: block;
             }
 
             nav ul li {
                 display: block;
+                margin: 0;
             }
 
-            .interest i {
-                font-size: 30px;
-            }
-        }
-
-        @media (max-width: 480px) {
-            .profile-pic {
-                width: 150px;
-            }
-
-            .social-icon {
-                font-size: 24px;
-                margin: 0 10px;
+            nav ul li a {
+                display: block;
+                padding: 10px;
             }
         }
     </style>
@@ -178,7 +179,7 @@
         <section id="interests">
             <h2>My Interests</h2>
             <div class="interest">
-                <i class="fas fa-dance"></i>
+                <i class="fas fa-music"></i> <!-- Music icon to represent dancing -->
                 <h3>Dancing</h3>
                 <p>Dancing is my way of expressing joy and staying fit. I love exploring different dance styles and attending dance classes.</p>
             </div>
