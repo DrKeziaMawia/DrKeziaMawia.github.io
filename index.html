@@ -13,15 +13,12 @@
             padding: 0;
             background: linear-gradient(to right, #ffeef8, #f8c2d5); /* Gradient background */
             color: #333;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
         }
 
         header {
             background: #ff9dc3; /* Soft pink background */
             color: #fff;
-            padding: 2em 1em;
+            padding: 2em 0;
             text-align: center;
             border-bottom: 5px solid #ff7f9c; /* Accent color */
         }
@@ -57,7 +54,6 @@
         }
 
         main {
-            flex: 1; /* Make main take up remaining space */
             padding: 2em 1em;
             text-align: center;
         }
@@ -94,7 +90,7 @@
         footer {
             background: #ff9dc3; /* Soft pink background */
             color: #fff;
-            padding: 1em 1em;
+            padding: 1em 0;
             text-align: center;
             border-top: 5px solid #ff7f9c; /* Accent color */
         }
@@ -140,22 +136,6 @@
 
         .social-icon:hover {
             transform: scale(1.1);
-        }
-
-        @media (max-width: 768px) {
-            nav ul {
-                display: block;
-            }
-
-            nav ul li {
-                display: block;
-                margin: 0;
-            }
-
-            nav ul li a {
-                display: block;
-                padding: 10px;
-            }
         }
     </style>
 </head>
@@ -205,8 +185,9 @@
                 <a href="https://www.linkedin.com/in/dr-kezia/" target="_blank" class="social-icon fab fa-linkedin"></a>
                 <a href="https://www.instagram.com/dr_kezia/" target="_blank" class="social-icon fab fa-instagram"></a>
                 <a href="https://twitter.com/dr_kezia" target="_blank" class="social-icon fab fa-twitter"></a>
-                <a href="mailto:keziamawia98@gmail.com" class="social-icon far fa-envelope"></a>
-                <a href="tel:+254704892447" class="social-icon fas fa-phone"></a>
+                <a href="https://github.com/DrKezia" target="_blank" class="social-icon fab fa-github"></a>
+                <a href="mailto:kezia@example.com" class="social-icon far fa-envelope"></a>
+                <a href="tel:+1234567890" class="social-icon fas fa-phone"></a>
             </div>
         </section>
     </main>
